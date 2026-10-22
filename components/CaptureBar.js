@@ -168,7 +168,7 @@ export default function CaptureBar() {
         </button>
         <input
           type="text"
-          placeholder="Cosa devo ricordarmi? (o fai una domanda)"
+          placeholder="Di cosa ha bisogno signor Wane?"
           value={value}
           onChange={(e) => setValue(e.target.value)}
           disabled={state === "elaborazione"}
