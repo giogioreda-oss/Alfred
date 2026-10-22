@@ -578,7 +578,8 @@ table.fin-table td:first-child { text-align: left; font-variant-numeric: initial
   box-shadow: 0 8px 24px rgba(16,24,40,.12);
   display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 18px;
 }
-#capture-bar input { flex: 1; border: none; outline: none; font-size: 14px; font-family: inherit; background: transparent; }
+#capture-bar input { flex: 1; border: none; outline: none; font-size: 14px; font-family: inherit; background: transparent; color: var(--text); }
+#capture-bar input::placeholder { color: var(--text-faint); }
 #capture-bar .mic-btn, #capture-bar .send-btn {
   width: 36px; height: 36px; border-radius: 50%; border: none; cursor: pointer;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
