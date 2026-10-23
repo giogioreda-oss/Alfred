@@ -29,18 +29,27 @@
 
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+@keyframes bg-illumina {
+  0%   { background-position: 0 0, 0 0, 15% 25%, 85% 75%; }
+  50%  { background-position: 0 0, 0 0, 85% 75%, 15% 25%; }
+  100% { background-position: 0 0, 0 0, 15% 25%, 85% 75%; }
+}
 body {
   background-color: var(--wave-bg-color);
   background-image: var(--wave-bg-image);
   background-attachment: fixed;
   background-repeat: repeat, repeat, no-repeat, no-repeat;
-  background-position: 0 0, 0 0, center, center;
-  background-size: 42px 42px, 42px 42px, 100% 100%, 100% 100%;
+  background-position: 0 0, 0 0, 15% 25%, 85% 75%;
+  background-size: 42px 42px, 42px 42px, 170% 170%, 170% 170%;
+  animation: bg-illumina 20s ease-in-out infinite alternate;
   color: var(--text);
   font-family: var(--font);
   font-size: 14px;
   line-height: 1.4;
   padding-bottom: 84px;
+}
+@media (prefers-reduced-motion: reduce) {
+  body { animation: none; }
 }
 
 h1, h2, h3, p { margin: 0; }
