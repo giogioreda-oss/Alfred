@@ -11,6 +11,7 @@ const SCREENS = [
 
 const SCREENS_DOPO_SVAGO = [
   { id: "indizi", label: "Indizi" },
+  { id: "posizione", label: "Posizione" },
   { id: "review", label: "Review" },
 ];
 

@@ -593,6 +593,12 @@ table.fin-table td:first-child { text-align: left; font-variant-numeric: initial
 .review-list-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-top: 1px solid var(--border); font-size: 13px; }
 .review-list-item:first-of-type { border-top: none; }
 .review-hint { color: var(--text-faint); font-size: 12px; line-height: 1.5; }
+
+/* ---- Posizione ---- */
+.posizione-mappa { border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); }
+.posizione-mappa iframe { width: 100%; height: 360px; border: 0; display: block; }
+.posizione-link { display: inline-block; margin-top: 10px; color: var(--accent); font-size: 13px; text-decoration: none; }
+.posizione-link:hover { text-decoration: underline; }
 .review-errore { color: var(--red); font-size: 12px; margin-top: 8px; }
 .review-summary-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .review-summary-header h3 { margin: 0; }

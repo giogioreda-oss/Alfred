@@ -9,6 +9,7 @@ import SaluteScreen from "./screens/SaluteScreen";
 import FinanzeScreen from "./screens/FinanzeScreen";
 import ReviewScreen from "./screens/ReviewScreen";
 import IndiziScreen from "./screens/IndiziScreen";
+import PosizioneScreen from "./screens/PosizioneScreen";
 import ImpostazioniScreen from "./screens/ImpostazioniScreen";
 
 export default function Dashboard() {
@@ -39,6 +40,7 @@ export default function Dashboard() {
         {active === "finanze" && <FinanzeScreen />}
         {active === "review" && <ReviewScreen />}
         {active === "indizi" && <IndiziScreen />}
+        {active === "posizione" && <PosizioneScreen />}
         {active === "impostazioni" && <ImpostazioniScreen />}
       </div>
       <CaptureBar />
