@@ -84,7 +84,7 @@ export default function TopBar({ active, onChange }) {
 
         {profilo && now && (
           <div className="topbar-saluto">
-            <span className="topbar-saluto-testo">{saluto}, {profilo.nome}</span>
+            <span className="topbar-saluto-testo">{saluto}, signor Wane</span>
             <span className="topbar-ora">{ora}</span>
           </div>
         )}
