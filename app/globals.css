@@ -81,6 +81,23 @@ h1, h2, h3, p { margin: 0; }
 #topbar .topbar-saluto { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
 #topbar .topbar-saluto-testo { font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #topbar .topbar-ora { font-variant-numeric: tabular-nums; color: var(--text-muted); font-size: 15px; font-weight: 700; flex-shrink: 0; }
+@keyframes sfera-fluttua {
+  0%   { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; transform: scale(1) translateY(0); }
+  25%  { border-radius: 46% 54% 52% 48% / 54% 48% 52% 46%; transform: scale(1.05) translateY(-1px); }
+  50%  { border-radius: 52% 48% 46% 54% / 48% 52% 46% 54%; transform: scale(0.97) translateY(1px); }
+  75%  { border-radius: 48% 52% 54% 46% / 52% 46% 54% 48%; transform: scale(1.04) translateY(-1px); }
+  100% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; transform: scale(1) translateY(0); }
+}
+#topbar .topbar-sfera {
+  display: inline-block; flex-shrink: 0; width: 20px; height: 20px;
+  background:
+    radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.9), rgba(180, 220, 255, 0.4) 25%, rgba(37, 99, 235, 0.85) 55%, rgba(10, 30, 90, 0.95) 85%);
+  box-shadow: 0 0 10px 2px rgba(59, 130, 246, 0.7), 0 0 20px 6px rgba(37, 99, 235, 0.35);
+  animation: sfera-fluttua 4.5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  #topbar .topbar-sfera { animation: none; }
+}
 #topbar nav { display: flex; gap: 2px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px; flex-shrink: 0; }
 #topbar nav button {
   border: 1px solid transparent; background: transparent; padding: 7px 11px; border-radius: 999px;
