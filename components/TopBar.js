@@ -9,19 +9,8 @@ const SCREENS = [
   { id: "finanze", label: "Finanze" },
 ];
 
-// "Svago" non apre subito una schermata come le altre voci: apre un menu a
-// tendina con gli ambiti tra cui scegliere (richiesta esplicita di
-// Filippo) — è l'ambito scelto ad aprire la schermata vera e propria.
-const AMBITI_SVAGO = [
-  { id: "svago-viaggio", label: "Viaggio" },
-  { id: "svago-watchlist", label: "Watch list" },
-  { id: "svago-libri", label: "Libri" },
-  { id: "svago-posti", label: "Uscite con gli amici" },
-  { id: "svago-notizie", label: "Notizie" },
-  { id: "svago-moda", label: "Trend moda" },
-];
-
 const SCREENS_DOPO_SVAGO = [
+  { id: "indizi", label: "Indizi" },
   { id: "review", label: "Review" },
 ];
 
@@ -44,7 +33,6 @@ function coloreFiamma(streak) {
 export default function TopBar({ active, onChange }) {
   const [now, setNow] = useState(null);
   const [profilo, setProfilo] = useState(null);
-  const [svagoAperto, setSvagoAperto] = useState(false);
 
   useEffect(() => {
     setNow(new Date());
@@ -100,33 +88,6 @@ export default function TopBar({ active, onChange }) {
               {s.label}
             </button>
           ))}
-
-          <div className="topbar-svago">
-            <button
-              type="button"
-              className={AMBITI_SVAGO.some((a) => a.id === active) ? "active" : ""}
-              onClick={() => setSvagoAperto((v) => !v)}
-            >
-              Svago
-            </button>
-            {svagoAperto && (
-              <div className="topbar-svago-menu">
-                {AMBITI_SVAGO.map((a) => (
-                  <button
-                    key={a.id}
-                    type="button"
-                    className={active === a.id ? "active" : ""}
-                    onClick={() => {
-                      onChange(a.id);
-                      setSvagoAperto(false);
-                    }}
-                  >
-                    {a.label}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
 
           {SCREENS_DOPO_SVAGO.map((s) => (
             <button

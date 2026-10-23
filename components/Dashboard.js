@@ -8,12 +8,7 @@ import ScuolaScreen from "./screens/ScuolaScreen";
 import SaluteScreen from "./screens/SaluteScreen";
 import FinanzeScreen from "./screens/FinanzeScreen";
 import ReviewScreen from "./screens/ReviewScreen";
-import SvagoViaggioScreen from "./screens/SvagoViaggioScreen";
-import SvagoWatchlistScreen from "./screens/SvagoWatchlistScreen";
-import SvagoPostiScreen from "./screens/SvagoPostiScreen";
-import SvagoLibriScreen from "./screens/SvagoLibriScreen";
-import NotizieScreen from "./screens/NotizieScreen";
-import ModaScreen from "./screens/ModaScreen";
+import IndiziScreen from "./screens/IndiziScreen";
 import ImpostazioniScreen from "./screens/ImpostazioniScreen";
 
 export default function Dashboard() {
@@ -43,12 +38,7 @@ export default function Dashboard() {
         {active === "salute" && <SaluteScreen />}
         {active === "finanze" && <FinanzeScreen />}
         {active === "review" && <ReviewScreen />}
-        {active === "svago-viaggio" && <SvagoViaggioScreen />}
-        {active === "svago-watchlist" && <SvagoWatchlistScreen />}
-        {active === "svago-posti" && <SvagoPostiScreen />}
-        {active === "svago-libri" && <SvagoLibriScreen />}
-        {active === "svago-notizie" && <NotizieScreen />}
-        {active === "svago-moda" && <ModaScreen />}
+        {active === "indizi" && <IndiziScreen />}
         {active === "impostazioni" && <ImpostazioniScreen />}
       </div>
       <CaptureBar />
