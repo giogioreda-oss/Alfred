@@ -86,9 +86,6 @@ export default function TopBar({ active, onChange }) {
           <div className="topbar-saluto">
             <span className="topbar-saluto-testo">{saluto}, signor Wane</span>
             <span className="topbar-ora">{ora}</span>
-            <span className="topbar-bat-badge" title="Bat-segnale" aria-hidden="true">
-              <span className="topbar-bat" />
-            </span>
           </div>
         )}
 
