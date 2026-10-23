@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 
 // Mostra una mappa centrata sulla posizione attuale del browser. Non serve
 // nessuna chiave API: usa la geolocalizzazione del dispositivo e una mappa
-// incorporata di Google Maps (lo stesso meccanismo pubblico usato dal link
-// "Apri su Google Maps" in Calendario).
+// incorporata di OpenStreetMap (servizio pubblico e gratuito, senza bisogno
+// di registrazione né chiavi, più affidabile dell'incorporamento di Google
+// senza chiave che può risultare bloccato).
 export default function PosizioneCard() {
   const [stato, setStato] = useState("in-corso"); // in-corso | ok | negato | non-supportato
   const [coord, setCoord] = useState(null);
@@ -44,7 +45,7 @@ export default function PosizioneCard() {
           <div className="posizione-mappa">
             <iframe
               title="Mappa posizione attuale"
-              src={`https://maps.google.com/maps?q=${coord.lat},${coord.lng}&z=15&output=embed`}
+              src={`https://www.openstreetmap.org/export/embed.html?bbox=${coord.lng - 0.01}%2C${coord.lat - 0.01}%2C${coord.lng + 0.01}%2C${coord.lat + 0.01}&layer=mapnik&marker=${coord.lat}%2C${coord.lng}`}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
