@@ -81,6 +81,18 @@ h1, h2, h3, p { margin: 0; }
 #topbar .topbar-saluto { display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0; }
 #topbar .topbar-saluto-testo { font-weight: 700; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 #topbar .topbar-ora { font-variant-numeric: tabular-nums; color: var(--text-muted); font-size: 15px; font-weight: 700; flex-shrink: 0; }
+#topbar .topbar-bat-badge {
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 32px; height: 20px; border-radius: 6px;
+  background: #050608; border: 1px solid rgba(10, 168, 255, 0.35);
+  box-shadow: 0 0 6px rgba(10, 168, 255, 0.35), inset 0 0 6px rgba(10, 168, 255, 0.15);
+}
+#topbar .topbar-bat {
+  width: 24px; height: 13px;
+  background: linear-gradient(180deg, #6fe2ff, #0aa8ff);
+  clip-path: polygon(50% 0%, 42% 11%, 38% 2%, 32% 17%, 26% 2%, 24% 17%, 17% 14%, 19% 25%, 4% 23%, 12% 30%, 0% 36%, 11% 38%, 6% 48%, 17% 44%, 17% 51%, 24% 44%, 29% 61%, 32% 48%, 37% 55%, 36% 44%, 50% 51%, 64% 44%, 63% 55%, 68% 48%, 71% 61%, 76% 44%, 83% 51%, 83% 44%, 94% 48%, 89% 38%, 100% 36%, 88% 30%, 96% 23%, 81% 25%, 83% 14%, 76% 17%, 74% 2%, 68% 17%, 62% 2%, 58% 11%);
+  filter: drop-shadow(0 0 2px #35c7ff) drop-shadow(0 0 5px #0ea5ff);
+}
 #topbar nav { display: flex; gap: 2px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px; flex-shrink: 0; }
 #topbar nav button {
   border: 1px solid transparent; background: transparent; padding: 7px 11px; border-radius: 999px;
