@@ -26,15 +26,15 @@ const SCREENS_DOPO_SVAGO = [
 ];
 
 // Scala di colori della fiamma: più la serie di giorni consecutivi è lunga, più
-// "si scalda" — dal grigio spento (0 giorni) fino al viola/blu, il colore delle
-// fiamme più calde in natura, per una serie molto lunga.
+// si "accende" — dal bianco spento (0 giorni), passando per gli azzurri e il
+// blu, fino al viola per una serie molto lunga.
 function coloreFiamma(streak) {
-  if (streak <= 0) return "#c2c7cf"; // spenta
-  if (streak <= 2) return "#f5b04a"; // arancione chiaro
-  if (streak <= 6) return "#e08a2c"; // arancione pieno
-  if (streak <= 13) return "#e0522c"; // rosso-arancio
-  if (streak <= 29) return "#d64545"; // rosso acceso
-  return "#8e44ad"; // viola: la serie più lunga, il "fuoco" più caldo
+  if (streak <= 0) return "#e4e7ec"; // spenta, quasi bianca
+  if (streak <= 2) return "#bcd9f5"; // azzurro chiarissimo
+  if (streak <= 6) return "#7ab3ea"; // azzurro
+  if (streak <= 13) return "#4a86d8"; // blu
+  if (streak <= 29) return "#3a5fc4"; // blu intenso
+  return "#7a4ac4"; // viola: la serie più lunga
 }
 
 // Saluto, ora e serie di giorni consecutivi vivono qui, nella barra in alto —
